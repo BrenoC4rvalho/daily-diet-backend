@@ -1,0 +1,8 @@
+# Dependencies
+node_modules
+
+#database
+data
+
+# Environment
+.env
