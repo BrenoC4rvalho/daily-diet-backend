@@ -10,7 +10,11 @@ if(process.env.NODE_ENV === 'test') {
 const envSchema = z.object({
     NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
     DB_CLIENT: z.enum(['sqlite3', 'pg','mysql2']).default('sqlite3'),
-    DB_URL: z.string(),
+    DB_HOST: z.string().default('localhost'),
+    DB_PORT: z.coerce.number().default(5432),
+    DB_USER: z.string().default('root'),
+    DB_PASSWORD: z.string().default('root'),
+    DB_NAME: z.string().default('diet'),
     PORT: z.coerce.number().default(3000),
 })
 
