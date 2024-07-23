@@ -23,7 +23,7 @@ export class userService {
         return await knex('users').where({ session_id: sessionId }).first()
     }
     static async create(user: User) {
-        await knex('users').insert(user)
+       await knex('users').insert(user)
     }
 
     static async update(id: string, user: User) {
