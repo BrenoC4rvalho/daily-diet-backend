@@ -98,6 +98,8 @@ export class MealController {
             date: date?.getTime() || meal.date,
             isOnDiet: isOnDiet || meal.is_on_diet,
         })
+
+        return reply.status(204).send({ message: 'Meal updated successfully' })
     }
 
     static async delete(request: FastifyRequest, reply: FastifyReply) {

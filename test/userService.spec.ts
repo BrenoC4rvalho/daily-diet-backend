@@ -12,14 +12,6 @@ describe('user service', () => {
         session_id: randomUUID()
     }
 
-    beforeAll(async () => {
-        //execSync('docker compose up')
-    })
-
-    afterAll(async () => {
-        //execSync('docker compose down')
-    })
-
     beforeEach(() => {
         execSync('npm run knex migrate:rollback -all')
         execSync('npm run knex migrate:latest')
